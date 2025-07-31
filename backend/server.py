@@ -18,7 +18,7 @@ import numpy as np
 import requests
 import json
 import pyotp
-from smartapi import SmartConnect
+from SmartApi import SmartConnect
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import math
