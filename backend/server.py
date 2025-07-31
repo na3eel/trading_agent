@@ -537,6 +537,11 @@ async def get_trade_log():
         logger.error(f"Error fetching trade log: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
+# Health check
+@api_router.get("/health")
+async def health_check():
+    return {"status": "healthy", "timestamp": datetime.now(timezone.utc)}
+
 # Background Tasks (placeholder - in production use celery or similar)
 def schedule_tasks():
     """Schedule periodic tasks"""
